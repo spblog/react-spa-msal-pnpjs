@@ -1,0 +1,11 @@
+/*
+ * SETTINGS-GLOBAL
+ */
+
+/*
+  * Set your font
+  */
+:root {
+  --fontDefault: Segoe UI Light, Arial, Verdana, helvetica, clean, sans-serif;
+}
+

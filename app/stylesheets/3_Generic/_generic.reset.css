@@ -1,0 +1,15 @@
+/****************************
+ * RESET
+ ****************************/
+
+/**
+ * HTML5 Reset
+ * We have learned much from/been inspired by/taken code where offered from:
+ * Eric Meyer                  :: http://meyerweb.com
+ * HTML5 Doctor                :: http://html5doctor.com
+ * and the HTML5 Boilerplate   :: http://html5boilerplate.com
+ */
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,8 @@
+/****************************
+ * OBJECTS - WRAPPERS
+ ****************************/
+
+body {
+  background-color: var(--primaryBackground);
+  font-family: var(--fontDefault);
+}
