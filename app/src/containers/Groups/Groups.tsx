@@ -6,7 +6,6 @@ import {
   IColumn,
   IDetailsList
 } from 'office-ui-fabric-react/lib/DetailsList';
-import { createRef } from 'office-ui-fabric-react/lib/Utilities';
 import * as React from 'react';
 
 import * as styles from './Groups.css';
@@ -43,7 +42,7 @@ const _columns: IColumn[] = [
 ];
 
 export class Groups extends React.Component<{}, IState> {
-  private _detailsList = createRef<IDetailsList>();
+  private _detailsList = React.createRef<IDetailsList>();
   constructor(props: any) {
     super(props);
 

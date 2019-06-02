@@ -1,4 +1,3 @@
-import { User } from '@microsoft/microsoft-graph-types';
 import { sp } from '@pnp/sp';
 import * as React from 'react';
 

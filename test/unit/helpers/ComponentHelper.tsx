@@ -1,8 +1,8 @@
-import { shallow, mount, render } from "enzyme";
+import { shallow } from "enzyme";
 import * as React from "react";
 
 const renderComponentHelper = (Component: any, mountOptions = {}) => {
-  return ({ children = null, ...props } = {}) => {
+  return ({ children = null, ...props }: any = {}) => {
     const wrapper = shallow(<Component {...props}> {children} </Component>, { ...mountOptions });
 
     const component = {
