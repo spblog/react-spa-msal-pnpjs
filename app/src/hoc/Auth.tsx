@@ -37,13 +37,15 @@ export function withAuth<TOriginalProps>(
     }
 
     public componentWillMount(): void {
-      msalInstance.handleRedirectCallback(() => {
+
+      // action to perform on authentication
+      msalInstance.handleRedirectCallback(() => { // on success
         this.setState({
           authenticated: true
         });
 
         this.initPnPjs();
-      }, (authErr: AuthError, accountState: string) => {
+      }, (authErr: AuthError, accountState: string) => {  // on fail
         console.log(authErr);
 
         this.setState({
@@ -52,6 +54,7 @@ export function withAuth<TOriginalProps>(
         });
       });
 
+      // if we are inside renewal callback (hash contains access token), do nothing
       if (msalInstance.isCallback(window.location.hash)) {
         this.setState({
           renewIframe: true
@@ -59,10 +62,11 @@ export function withAuth<TOriginalProps>(
         return;
       }
 
+      // not logged in, perform full page redirect
       if (!msalInstance.getAccount()) {
         msalInstance.loginRedirect({});
         return;
-      } else {
+      } else {     // logged in, set authenticated state and init pnpjs library
         this.setState({
           authenticated: true
         });
