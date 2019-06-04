@@ -8,3 +8,7 @@
 4. Under `./app/src/msal/msalConfig.ts` replace values with yours tenant id and client id from step 1
 5. `npm i`
 6. `npm run start` - a browser window will open and will give you an option to login. After authentication you will see your groups and site info.
+
+
+-- 
+Blog post - [Building Single Page Application with React, MSAL.js and PnPjs](https://spblog.net/post/2019/06/04/building-single-page-application-with-react-msal-js-and-pnpjs)
