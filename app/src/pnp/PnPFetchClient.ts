@@ -34,7 +34,7 @@ export class PnPFetchClient extends BearerTokenFetchClient {
       return response.accessToken;
     } catch (error) {
       if (this.requiresInteraction(error.errorCode)) {
-        this.authContext.loginRedirect(request);
+        this.authContext.acquireTokenRedirect(request);
       } else {
         throw error;
       }
